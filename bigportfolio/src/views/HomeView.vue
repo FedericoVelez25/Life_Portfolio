@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Hero />
+    <!-- <Epic /> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import Hero from "@/components/sections/Hero.vue";
+// import Epic from "@/components/sections/Epic.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    HelloWorld
-  }
-}
+    Hero,
+    // Epic,
+  },
+};
 </script>
+<style>
+#climb {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+
+  /* height: 100%;
+  width: auto; */
+}
+</style>
