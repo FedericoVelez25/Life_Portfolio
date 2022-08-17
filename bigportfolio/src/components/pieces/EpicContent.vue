@@ -15,7 +15,7 @@
         and now living in <span style="color: #ffe602">Barcelona.</span>
       </p>
     </div>
-    <div class="projects">
+    <!-- <div class="projects">
       <ProjCard
         class="proj_cards"
         v-for="project in projects"
@@ -25,16 +25,16 @@
         :img="project.img"
         :link="project.link"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import ProjCard from "@/components/pieces/ProjCard.vue";
+// import ProjCard from "@/components/pieces/ProjCard.vue";
 export default {
   name: "WallContentSection",
   components: {
-    ProjCard,
+    // ProjCard,
   },
   data() {
     return {
@@ -115,11 +115,11 @@ export default {
   display: flex;
   flex-direction: row;
   z-index: 10;
-  width: 100%;
+  width: auto;
   justify-content: flex-end;
   text-align: center;
-  margin-top: 10%;
-  padding-right: 290px;
+  margin-top: 15%;
+  padding-right: 90px;
 }
 
 #intro_text {

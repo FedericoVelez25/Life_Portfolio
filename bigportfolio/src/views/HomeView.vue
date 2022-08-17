@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Hero />
-    <!-- <Epic /> -->
+    <Epic />
   </div>
 </template>
 
@@ -9,13 +9,13 @@
 // @ is an alias to /src
 
 import Hero from "@/components/sections/Hero.vue";
-// import Epic from "@/components/sections/Epic.vue";
+import Epic from "@/components/sections/Epic.vue";
 
 export default {
   name: "HomeView",
   components: {
     Hero,
-    // Epic,
+    Epic,
   },
 };
 </script>
