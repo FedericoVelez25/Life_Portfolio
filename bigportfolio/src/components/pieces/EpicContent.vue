@@ -15,7 +15,7 @@
         and now living in <span style="color: #ffe602">Barcelona.</span>
       </p>
     </div>
-    <!-- <div class="projects">
+    <div class="projects">
       <ProjCard
         class="proj_cards"
         v-for="project in projects"
@@ -25,16 +25,16 @@
         :img="project.img"
         :link="project.link"
       />
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
-// import ProjCard from "@/components/pieces/ProjCard.vue";
+import ProjCard from "@/components/pieces/ProjCard.vue";
 export default {
   name: "WallContentSection",
   components: {
-    // ProjCard,
+    ProjCard,
   },
   data() {
     return {
@@ -52,7 +52,7 @@ export default {
           title: "Circle Agency",
           description:
             "Web development for Circle Agency. This was one of my Ironhack projects and the first responsive website I've ever built.",
-          img: "@/assets/projects_imgs/Climbapp.png",
+          img: "Circle.png",
           link: "https://dreamy-swartz-c19211.netlify.app",
         },
         {
@@ -60,7 +60,7 @@ export default {
           title: "To-Do",
           description:
             "If you're going on an adventure, it's crucial to have a To-Do list for the essentials in the wild.",
-          img: "../assets/projects_imgs/Climbapp.png",
+          img: "To_Do.png",
           link: "https://climbapp.netlify.app/",
         },
         {
@@ -68,7 +68,7 @@ export default {
           title: "Weather App",
           description:
             "And, of course, part of planning an adventure is to be aware of the weather. A great starter project to start experimenting with an API. This weather app changes the background depending on the temperature.",
-          img: "../../assets/projects_imgs/Climbapp.png",
+          img: "Weatherapp.png",
           link: "https://climbapp.netlify.app/",
         },
       ],
@@ -138,7 +138,7 @@ export default {
 /* PROJECTS SECTION */
 
 .projects {
-  margin-top: 10%;
+  margin-top: 30%;
   display: flex;
   flex-direction: column;
   align-self: center;

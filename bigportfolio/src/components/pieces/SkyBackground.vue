@@ -19,11 +19,12 @@ export default {
 
 <style>
 .cloud_container {
+  background-color: aqua;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
-  height: 100%;
+  height: 5000px;
   width: 100%;
 }
 </style>
