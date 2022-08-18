@@ -20,6 +20,7 @@
         class="proj_cards"
         v-for="project in projects"
         :key="project.id"
+        :id="project.id"
         :title="project.title"
         :description="project.description"
         :img="project.img"
