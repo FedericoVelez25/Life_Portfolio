@@ -1,6 +1,6 @@
 <template>
   <div class="containerFlex">
-    <div class="yellowCard">
+    <!-- <div class="yellowCard">
       <div class="textSideYellow">
         <h2>{{ title }}</h2>
         <p>
@@ -9,10 +9,10 @@
         <button class="projBtn" @click="openLink">Open Project</button>
       </div>
       <div class="img_side">
-        <img src="@/assets/projects/Climbapp.png" alt="climbapp" />
-        <!-- <img :src="require('@/assets/projects' + img + '')" alt="climbapp" /> -->
-      </div>
-    </div>
+        <img src="@/assets/projects/Climbapp.png" alt="climbapp" /> -->
+    <!-- <img :src="require('@/assets/projects' + img + '')" alt="climbapp" /> -->
+    <!-- </div>
+    </div> -->
     <div class="blackCard">
       <div class="img_side">
         <img src="@/assets/projects/Circle.png" alt="climbapp" />
