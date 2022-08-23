@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <div id="rssBlock">
-      <p class="cnnContents">
-        <span class="marqueeStyle"
-          >&nbsp;TECK STACK • TECK STACK • TECK STACK • TECK STACK •</span
-        >
-        <!-- duplicate above, change style to allow continous scroll -->
-        <span class="marqueeStyle2"
-          >&nbsp;TECK STACK • TECK STACK • TECK STACK • TECK STACK •&nbsp;</span
-        >
-      </p>
-    </div>
+  <div id="containerFlex">
+    <p class="cnnContents">
+      <span class="loop1"
+        >&nbsp;TECH STACK • TECH STACK • TECH STACK • TECH STACK •</span
+      >
+      <!-- duplicate above, change style to allow continous scroll -->
+      <span class="loop2"
+        >&nbsp;TECH STACK • TECH STACK • TECH STACK • TECH STACK •&nbsp;</span
+      >
+    </p>
   </div>
 </template>
 
@@ -21,53 +19,37 @@ export default {
 </script>
 
 <style scoped>
-/* #rssBlock {
-  background-color: #ffe602;
-  font-family: "Basement Grotesque";
-}
-
-.marqueeStyle {
-  font-family: "Basement Grotesque";
-}
-.marqueeStyle2 {
-  font-family: "Basement Grotesque";
-} */
-#rssBlock {
+#containerFlex {
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 0px;
   height: 20%;
   background: #ffe602;
-  position: absolute;
   width: 100%;
   overflow: hidden;
+  border: 8px solid black;
 }
 
 /*remove p*/
 .cnnContents {
   width: 100%;
-  padding-top: 20px;
   margin: 0 auto;
   font-size: 30px;
   white-space: nowrap;
-  text-transform: uppercase;
-  font-family: "Museo";
-  font-weight: 300;
 }
 
-.marqueeStyle {
+.loop1 {
   font-family: "Basement Grotesque";
-  font-size: 50px;
+  font-size: 80px;
   display: inline-block;
   /* Apply animation to this element */
   -webkit-animation: scrolling-left1 20s linear infinite;
   animation: scrolling-left1 20s linear infinite;
 }
 
-.marqueeStyle2 {
+.loop2 {
   font-family: "Basement Grotesque";
-  font-size: 50px;
+  font-size: 80px;
   display: inline-block;
   /* Apply animation to this element */
   -webkit-animation: scrolling-left2 20s linear infinite;
@@ -77,8 +59,8 @@ export default {
 /* scrolling-left is continuous/repeatly text */
 @keyframes scrolling-left1 {
   0% {
-    transform: translateX(100%);
-    -webkit-transform: translateX(100%);
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);
@@ -87,8 +69,8 @@ export default {
 }
 @keyframes scrolling-left2 {
   0% {
-    transform: translateX(0%);
-    -webkit-transform: translateX(0%);
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
   }
   100% {
     transform: translateX(-200%);

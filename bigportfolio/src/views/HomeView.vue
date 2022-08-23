@@ -22,13 +22,4 @@ export default {
   },
 };
 </script>
-<style>
-#climb {
-  display: flex;
-  padding: 0;
-  flex-direction: column;
-
-  /* height: 100%;
-  width: auto; */
-}
-</style>
+<style></style>

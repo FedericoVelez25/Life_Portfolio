@@ -1,37 +1,45 @@
 <template>
   <div class="containerFlex">
-    <!-- <div class="yellowCard">
-      <div class="textSideYellow">
+    <div :class="isEven ? 'blackCard' : 'yellowCard'">
+      <div :class="isEven ? 'textSideBlack' : 'textSideYellow'">
         <h2>{{ title }}</h2>
         <p>
           {{ description }}
         </p>
         <button class="projBtn" @click="openLink">Open Project</button>
       </div>
-      <div class="img_side">
-        <img src="@/assets/projects/Climbapp.png" alt="climbapp" /> -->
-    <!-- <img :src="require('@/assets/projects' + img + '')" alt="climbapp" /> -->
-    <!-- </div>
-    </div> -->
-    <div class="blackCard">
-      <div class="img_side">
-        <img src="@/assets/projects/Circle.png" alt="climbapp" />
-        <!-- <img :src="require('@/assets/projects' + img + '')" alt="climbapp" /> -->
-      </div>
-      <div class="text_side">
-        <h2>{{ title }}</h2>
-        <p>
-          {{ description }}
-        </p>
-        <button class="projBtn" @click="openLink">Open Project</button>
+      <div :class="isEven ? 'imgSideBlack' : 'imgSideYellow'">
+        <img
+          :class="isEven ? 'imgBlack' : 'imgYellow'"
+          :src="require('@/assets/projects/' + img + '')"
+          alt="climbapp"
+        />
       </div>
     </div>
+    <!-- <div v-else class="blackCard">
+      <div class="imgSideBlack">
+        <img :src="require('@/assets/projects/' + img + '')" alt="climbapp" />
+      </div>
+      <div class="textSideBlack">
+        <h2>{{ title }}</h2>
+        <p>
+          {{ description }}
+        </p>
+        <button class="projBtn" @click="openLink">Open Project</button>
+      </div>
+    </div> -->
   </div>
 </template>
-
+<!-- <img :src="require('@/assets/projects' + img + '')" alt="climbapp" /> -->
 <script>
 export default {
   name: "ProjCard",
+  data() {
+    return {
+      isEven: false,
+      imgSrc: "../src/assets/projects",
+    };
+  },
   props: {
     id: Number,
     title: String,
@@ -43,13 +51,12 @@ export default {
     openLink() {
       window.open(this.link, "_blank");
     },
-
-    methods: {
-      // a function that takes the the id prop and returns true if it is even
-      isEven(id) {
-        return id % 2 === 0;
-      },
-    },
+  },
+  mounted() {
+    if (this.id % 2 === 0) {
+      this.isEven = true;
+    }
+    this.imgSrc += this.img;
   },
 };
 </script>
@@ -82,29 +89,31 @@ export default {
   text-align: center;
   width: 50%;
   margin: 0;
-  padding: 5%;
+  /* padding: auto; */
+  padding-left: 0;
   height: auto;
   background-color: #ffffff;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  gap: 10%;
 }
 
 h2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
   font-family: "Basement Grotesque";
   font-size: 64px;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 }
 
 p {
-  margin-top: 20px;
-  margin-bottom: 20px;
   font-family: "Argentum Sans";
   font-size: 18px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 button {
-  width: 80%;
+  width: 60%;
   height: 40px;
   align-self: center;
   background-color: #ffe602;
@@ -114,30 +123,38 @@ button {
   font-size: 18px;
 }
 
-.yellowCard .img_side {
+.imgSideYellow {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  /* width: 100%; */
+  width: 50%;
   height: auto;
   background-color: #ffe602;
-  padding: 50px;
+  padding: 0;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
-img {
-  width: 80%;
-  height: 80%;
+.imgYellow {
+  width: auto;
+  height: 70%;
   align-self: center;
-  border: 4px solid black;
+  border: 6px solid black;
+  border-radius: 40px;
+}
+
+.imgBlack {
+  width: auto;
+  height: 70%;
+  align-self: center;
+  border: 6px solid black;
   border-radius: 40px;
 }
 
 .blackCard {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-content: center;
   justify-content: center;
   width: 100%;
@@ -146,21 +163,22 @@ img {
   border: 8px solid black;
 }
 
-.blackCard > .text_side {
+.textSideBlack {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   width: 50%;
   margin: 0;
-  padding: 0 5% 0%;
+  padding: 0;
   height: auto;
   background-color: #ffffff;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+  gap: 10%;
 }
 
-.blackCard > .img_side {
+.imgSideBlack {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -168,7 +186,7 @@ img {
   width: 50%;
   height: auto;
   background-color: black;
-  padding: 50px;
+  padding: 0;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }

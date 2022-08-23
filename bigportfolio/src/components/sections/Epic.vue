@@ -1,7 +1,7 @@
 <template>
   <section id="epicSection">
-    <SkyBackground />
-    <BigWall />
+    <!-- <SkyBackground /> -->
+    <BigWall class="bigWall" />
     <EpicContent />
   </section>
 </template>

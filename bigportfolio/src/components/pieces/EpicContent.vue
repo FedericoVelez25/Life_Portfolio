@@ -10,9 +10,10 @@
     </div>
     <div class="info">
       <p id="intro_text">
-        A <span style="color: #ffe602">Front-End developer</span> with
-        background in advertising and digital marketing. Originally from Bogota,
-        and now living in <span style="color: #ffe602">Barcelona.</span>
+        A <span style="color: #ffe602">Front-End developer</span> with a
+        background in <span style="color: #ffe602">advertising</span> and
+        <span style="color: #ffe602">digital marketing</span>. Originally from
+        Bogota, and now living in <span style="color: #ffe602">Barcelona.</span>
       </p>
     </div>
     <div class="projects">
@@ -132,7 +133,7 @@ export default {
 
   text-align: end;
   font-size: 40px;
-  width: 40vw;
+  width: 41vw;
   z-index: 10;
 }
 

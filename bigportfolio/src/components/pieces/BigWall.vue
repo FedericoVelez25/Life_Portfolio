@@ -16,9 +16,10 @@ export default {
   padding-top: 366%; /* (img-height / img-width * container-width) */
   /* (5248 / 1440.5 * 100) */
   width: 100%;
-  position: absolute;
+  margin-bottom: -25px;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
-  /* margin-top: 5px; */
+  background-color: #29c2ff;
 }
 </style>
