@@ -1,21 +1,43 @@
 <template>
   <section id="techSection">
-    <TechLoop class="indexLoop" />
-    <div class="containerFlex">
-      <div class="logo" id="html"><img src="@/assets/logos/html.png" /></div>
-      <div class="logo" id="css"><img src="@/assets/logos/css.png" /></div>
-      <div class="logo" id="js"><img src="@/assets/logos/js.png" /></div>
-      <div class="logo" id="vue"><img src="@/assets/logos/vue.png" /></div>
-      <div class="logo" id="github">
+    <TechLoop class="techLoop" />
+    <div class="containerFlex grid">
+      <div class="logo col" id="html">
+        <img src="@/assets/logos/html.png" />
+      </div>
+      <div class="logo col" id="css">
+        <img src="@/assets/logos/css.png" />
+      </div>
+      <div class="logo col" id="js">
+        <img src="@/assets/logos/js.png" />
+      </div>
+      <div class="logo col" id="vue">
+        <img src="@/assets/logos/vue.png" />
+      </div>
+      <div class="logo col" id="github">
         <img src="@/assets/logos/github.png" />
       </div>
-      <div class="logo" id="git"><img src="@/assets/logos/git.png" /></div>
-      <div class="logo" id="ps"><img src="@/assets/logos/ps.png" /></div>
-      <div class="logo" id="ai"><img src="@/assets/logos/ai.png" /></div>
-      <div class="logo" id="figma"><img src="@/assets/logos/figma.png" /></div>
-      <div class="logo" id="jira"><img src="@/assets/logos/jira.png" /></div>
-      <div class="logo" id="mongo"><img src="@/assets/logos/mongo.png" /></div>
-      <div class="logo" id="node"><img src="@/assets/logos/node.png" /></div>
+      <div class="logo col" id="git">
+        <img src="@/assets/logos/git.png" />
+      </div>
+      <div class="logo col" id="ps">
+        <img src="@/assets/logos/ps.png" />
+      </div>
+      <div class="logo col" id="ai">
+        <img src="@/assets/logos/ai.png" />
+      </div>
+      <div class="logo col" id="figma">
+        <img src="@/assets/logos/figma.png" />
+      </div>
+      <div class="logo col" id="tailwind">
+        <img src="@/assets/logos/tailwind.png" />
+      </div>
+      <div class="logo col" id="mongo">
+        <img src="@/assets/logos/mongo.png" />
+      </div>
+      <div class="logo col" id="node">
+        <img src="@/assets/logos/node.png" />
+      </div>
     </div>
   </section>
 </template>
@@ -41,21 +63,38 @@ export default {
   width: auto;
 }
 
-.contianerFlex {
+/* .contianerFlex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   height: 200px;
   width: 100vw;
   z-index: 20;
-}
+} */
 
 .logo {
   display: flex;
-
   justify-content: center;
   align-content: center;
-  width: 16.6%;
-  height: auto;
+}
+
+.grid {
+  /* display: block; */
+  padding: 16px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-gap: 16px;
+  }
+}
+
+.col {
+  margin-block: 16px;
+  padding: 16px;
+}
+
+#vue {
+  padding: 10%;
 }
 </style>

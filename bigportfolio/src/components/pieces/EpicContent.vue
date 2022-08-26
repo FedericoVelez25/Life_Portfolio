@@ -8,6 +8,12 @@
       />
       <p id="federico">Hi!<br />I'm Federico</p>
     </div>
+    <img
+      class="cloud mt-20"
+      id="cloud_1"
+      src="@/assets/hero/cloud_1.png"
+      alt="cloud"
+    />
     <div class="info">
       <p id="intro_text">
         A <span style="color: #ffe602">Front-End developer</span> with a
@@ -16,6 +22,18 @@
         Bogota, and now living in <span style="color: #ffe602">Barcelona.</span>
       </p>
     </div>
+    <img
+      class="cloud w-2/5"
+      id="cloud_projects"
+      src="@/assets/hero/cloud_projects.png"
+      alt="cloud"
+    />
+    <img
+      class="cloud"
+      id="cloud_3"
+      src="@/assets/hero/cloud_3.png"
+      alt="cloud"
+    />
     <div class="projects">
       <ProjCard
         class="proj_cards"
@@ -28,6 +46,12 @@
         :link="project.link"
       />
     </div>
+    <img
+      class="cloud mt-20"
+      id="cloud_4"
+      src="@/assets/hero/cloud_4.png"
+      alt="cloud"
+    />
   </div>
 </template>
 
@@ -125,12 +149,8 @@ export default {
 }
 
 #intro_text {
-  /* position: relative;
-  top: 700px;
-  left: 250px; */
   color: white;
   font-family: "Bubblegum";
-
   text-align: end;
   font-size: 40px;
   width: 41vw;
@@ -140,16 +160,18 @@ export default {
 /* PROJECTS SECTION */
 
 .projects {
-  margin-top: 30%;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-self: center;
   width: 80%;
 }
 
-/* .proj_cards {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-} */
+#cloud_projects {
+  margin-top: 50%;
+}
+#cloud_3 {
+  margin-top: -50px;
+  align-self: center;
+}
 </style>

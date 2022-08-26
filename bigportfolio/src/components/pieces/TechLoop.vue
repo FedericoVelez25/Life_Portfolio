@@ -54,7 +54,7 @@ export default {
   /* Apply animation to this element */
   -webkit-animation: scrolling-left2 20s linear infinite;
   animation: scrolling-left2 20s linear infinite;
-  animation-delay: 10s;
+  animation-delay: 5s;
 }
 /* scrolling-left is continuous/repeatly text */
 @keyframes scrolling-left1 {
