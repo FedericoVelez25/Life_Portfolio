@@ -1,17 +1,12 @@
 <template>
   <div class="epicContainerFlex">
     <div class="hello">
-      <img
-        id="text_box"
-        src="@/assets/hero/white_text_box.png"
-        alt="text box"
-      />
-      <p id="federico">Hi!<br />I'm Federico</p>
+      <img id="text_box" src="@/assets/hero/federico.png" alt="text box" />
     </div>
     <img
-      class="cloud mt-20"
+      class="cloud"
       id="cloud_1"
-      src="@/assets/hero/cloud_1.png"
+      src="@/assets/hero/clouds/cloud_1.png"
       alt="cloud"
     />
     <div class="info">
@@ -23,15 +18,15 @@
       </p>
     </div>
     <img
-      class="cloud w-2/5"
+      class="cloud"
       id="cloud_projects"
-      src="@/assets/hero/cloud_projects.png"
+      src="@/assets/hero/clouds/cloud_projects.png"
       alt="cloud"
     />
     <img
       class="cloud"
       id="cloud_3"
-      src="@/assets/hero/cloud_3.png"
+      src="@/assets/hero/clouds/cloud_3.png"
       alt="cloud"
     />
     <div class="projects">
@@ -49,7 +44,7 @@
     <img
       class="cloud mt-20"
       id="cloud_4"
-      src="@/assets/hero/cloud_4.png"
+      src="@/assets/hero/clouds/cloud_4.png"
       alt="cloud"
     />
   </div>
@@ -119,7 +114,8 @@ export default {
   display: flex;
   justify-content: flex-start;
   position: relative;
-  margin-top: 10%;
+  margin-top: 15%;
+  margin-left: 7%;
 
   /* width: 100%; */
 }
@@ -144,7 +140,7 @@ export default {
   width: auto;
   justify-content: flex-end;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 11%;
   padding-right: 90px;
 }
 
@@ -167,11 +163,23 @@ export default {
   width: 80%;
 }
 
+#cloud_1 {
+  margin-top: 10%;
+  width: 30%;
+}
+
 #cloud_projects {
   margin-top: 50%;
+  width: 50%;
 }
+
 #cloud_3 {
   margin-top: -50px;
-  align-self: center;
+
+  align-self: flex-start;
+}
+#cloud_4 {
+  margin-top: 50px;
+  align-self: flex-start;
 }
 </style>

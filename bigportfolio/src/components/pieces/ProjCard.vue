@@ -30,7 +30,6 @@
     </div> -->
   </div>
 </template>
-<!-- <img :src="require('@/assets/projects' + img + '')" alt="climbapp" /> -->
 <script>
 export default {
   name: "ProjCard",

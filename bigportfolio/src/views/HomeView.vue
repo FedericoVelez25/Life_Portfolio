@@ -3,6 +3,7 @@
     <Hero />
     <Epic />
     <TechStack />
+    <About />
   </div>
 </template>
 
@@ -12,6 +13,8 @@
 import Hero from "@/components/sections/Hero.vue";
 import Epic from "@/components/sections/Epic.vue";
 import TechStack from "@/components/sections/TechStack.vue";
+import About from "@/components/sections/About.vue";
+// import About from "@/components/sections/About.vue";
 
 export default {
   name: "HomeView",
@@ -19,6 +22,7 @@ export default {
     Hero,
     Epic,
     TechStack,
+    About,
   },
 };
 </script>

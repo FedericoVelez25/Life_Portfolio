@@ -1,18 +1,16 @@
 <template>
   <section id="epicSection">
-    <!-- <SkyBackground /> -->
     <BigWall class="bigWall" />
     <EpicContent />
   </section>
 </template>
 
 <script>
-import SkyBackground from "../pieces/SkyBackground.vue";
 import BigWall from "../pieces/BigWall.vue";
 import EpicContent from "../pieces/EpicContent.vue";
 export default {
   name: "Epic",
-  components: { SkyBackground, BigWall, EpicContent },
+  components: { BigWall, EpicContent },
 };
 </script>
 
