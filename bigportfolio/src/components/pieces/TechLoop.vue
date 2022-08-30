@@ -52,9 +52,9 @@ export default {
   font-size: 80px;
   display: inline-block;
   /* Apply animation to this element */
-  -webkit-animation: scrolling-left2 20s linear infinite;
-  animation: scrolling-left2 20s linear infinite;
-  animation-delay: 5s;
+  -webkit-animation: scrolling-left2 40s linear infinite;
+  animation: scrolling-left2 40s linear infinite;
+  animation-delay: 0.1s;
 }
 /* scrolling-left is continuous/repeatly text */
 @keyframes scrolling-left1 {
@@ -69,8 +69,8 @@ export default {
 }
 @keyframes scrolling-left2 {
   0% {
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
   100% {
     transform: translateX(-200%);
@@ -80,10 +80,10 @@ export default {
 
 @-webkit-keyframes scrolling-left1 {
   0% {
-    -webkit-transform: translateX(100%);
+    -webkit-transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-100%);
+    -webkit-transform: translateX(100%);
   }
 }
 @-webkit-keyframes scrolling-left2 {
