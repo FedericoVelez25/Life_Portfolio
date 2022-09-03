@@ -1,6 +1,6 @@
 <template>
-  <section class="aboutSection">
-    <section class="salmonFlex">
+  <div class="aboutSection">
+    <div class="salmonFlex">
       <div class="centerContainer">
         <div class="textBox">
           <p>
@@ -32,28 +32,58 @@
           />
         </div>
       </div>
-    </section>
+    </div>
     <section class="skillsContainer">
       <div class="scroll text1">
         <div>
-          Front-End Dev • Craftsman • Digital Marketing • Advertising • Team
-          Player • Project Manager • Music Lover • UX/UI • Climber
+          <span style="color: #ffe602">Front-End Dev</span> • Craftsman •
+          <span style="color: #ffe602">Digital Marketing</span>• Team Player •
+          <span style="color: #ffe602">Advertising</span> • Music Lover •
+          <span style="color: #ffe602">Project Manager</span> • Climber •
+          <span style="color: #ffe602">UX/UI</span> • Globetrotter •
+        </div>
+        <div>
+          <span style="color: #ffe602">Front-End Dev</span> • Craftsman •
+          <span style="color: #ffe602">Digital Marketing</span>• Team Player •
+          <span style="color: #ffe602">Advertising</span> • Music Lover •
+          <span style="color: #ffe602">Project Manager</span> • Climber •
+          <span style="color: #ffe602">UX/UI</span> • Globetrotter •
         </div>
       </div>
       <div class="scroll text2">
         <div>
-          Front-End Dev • Craftsman • Digital Marketing • Advertising • Team
-          Player • Project Manager • Music Lover • UX/UI • Climber
+          <span style="color: #ffe602">Front-End Dev</span> • Craftsman •
+          <span style="color: #ffe602">Digital Marketing</span>• Team Player •
+          <span style="color: #ffe602">Advertising</span> • Music Lover •
+          <span style="color: #ffe602">Project Manager</span> • Climber •
+          <span style="color: #ffe602">UX/UI</span> • Globetrotter •
+        </div>
+        <div>
+          <span style="color: #ffe602">Front-End Dev</span> • Craftsman •
+          <span style="color: #ffe602">Digital Marketing</span>• Team Player •
+          <span style="color: #ffe602">Advertising</span> • Music Lover •
+          <span style="color: #ffe602">Project Manager</span> • Climber •
+          <span style="color: #ffe602">UX/UI</span> • Globetrotter •
         </div>
       </div>
       <div class="scroll text3">
         <div>
-          Front-End Dev • Craftsman • Digital Marketing • Advertising • Team
-          Player • Project Manager • Music Lover • UX/UI • Climber
+          <span style="color: #ffe602">Front-End Dev</span> • Craftsman •
+          <span style="color: #ffe602">Digital Marketing</span>• Team Player •
+          <span style="color: #ffe602">Advertising</span> • Music Lover •
+          <span style="color: #ffe602">Project Manager</span> • Climber •
+          <span style="color: #ffe602">UX/UI</span> • sdfg •
+        </div>
+        <div>
+          <span style="color: #ffe602">Front-End Dev</span> • Craftsman •
+          <span style="color: #ffe602">Digital Marketing</span>• Team Player •
+          <span style="color: #ffe602">Advertising</span> • Music Lover •
+          <span style="color: #ffe602">Project Manager</span> • Climber •
+          <span style="color: #ffe602">UX/UI</span> • sdfg •
         </div>
       </div>
     </section>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -76,7 +106,6 @@ export default {
   background-image: url("@/assets/about/mountains3.png");
   background-repeat: no-repeat;
   background-position: bottom;
-  /* background-size: cover; */
 }
 .centerContainer {
   display: flex;
@@ -137,16 +166,108 @@ button {
   z-index: 20;
 }
 
-.skillsContainer {
+section {
   padding: 5%;
   margin: 0;
-  border: 8px solid black;
-  background-color: greenyellow;
+
+  background-color: black;
   width: 100%;
   overflow: hidden;
   height: 20%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+section .scroll {
+  width: 100%;
+  display: flex;
+}
+section .scroll div {
+  font-family: "Bubblegum";
+  font-size: 100px;
+  color: white;
+  white-space: nowrap;
+  animation: animateTop 60s linear infinite;
+  animation-delay: -60s;
+}
+section .scroll div:nth-child(2) {
+  animation: animateTop2 60s linear infinite;
+  animation-delay: -30s;
+}
+
+@keyframes animateTop {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animateTop2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+section .scroll.text2 div {
+  font-family: "Bubblegum";
+  font-size: 100px;
+  color: white;
+  white-space: nowrap;
+  animation: animateMiddle 200s linear infinite;
+  animation-delay: -200s;
+}
+section .scroll.text2 div:nth-child(2) {
+  animation: animateMiddle2 200s linear infinite;
+  animation-delay: -100s;
+}
+@keyframes animateMiddle {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animateMiddle2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+section .scroll.text3 div {
+  font-family: "Bubblegum";
+  font-size: 100px;
+  color: white;
+  white-space: nowrap;
+  animation: animateBottom 100s linear infinite;
+  animation-delay: -100s;
+}
+section .scroll.text3 div:nth-child(2) {
+  animation: animateBottom2 100s linear infinite;
+  animation-delay: -50s;
+}
+@keyframes animateBottom {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animateBottom2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
 }
 </style>

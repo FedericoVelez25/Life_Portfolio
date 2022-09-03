@@ -140,16 +140,17 @@ export default {
   width: auto;
   justify-content: flex-end;
   text-align: center;
-  margin-top: 11%;
-  padding-right: 90px;
+  margin-top: 5%;
+  padding-right: 5%;
 }
 
 #intro_text {
   color: white;
   font-family: "Bubblegum";
   text-align: end;
-  font-size: 40px;
-  width: 41vw;
+  font-size: 50px;
+  text-transform: uppercase;
+  width: 45vw;
   z-index: 10;
 }
 
