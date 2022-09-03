@@ -141,19 +141,12 @@ button {
   padding: 5%;
   margin: 0;
   border: 8px solid black;
-  box-sizing: border-box;
-  background-color: black;
+  background-color: greenyellow;
+  width: 100%;
+  overflow: hidden;
+  height: 20%;
   display: flex;
   justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-
-section .scroll {
-  font-family: "Bubblegum";
-  font-size: 128px;
-  color: white;
-  width: 100%;
-  display: flex;
+  align-items: center;
 }
 </style>

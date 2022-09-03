@@ -1,15 +1,10 @@
 <template>
-  <div id="containerFlex">
-    <p class="cnnContents">
-      <span class="loop1"
-        >&nbsp;TECH STACK • TECH STACK • TECH STACK • TECH STACK •</span
-      >
-      <!-- duplicate above, change style to allow continous scroll -->
-      <span class="loop2"
-        >&nbsp;TECH STACK • TECH STACK • TECH STACK • TECH STACK •&nbsp;</span
-      >
-    </p>
-  </div>
+  <section id="containerFlex">
+    <div class="scroll text1">
+      <div>TECH STACK • TECH STACK • TECH STACK • TECH STACK •</div>
+      <div>TECH STACK • TECH STACK • TECH STACK • TECH STACK •</div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -19,79 +14,48 @@ export default {
 </script>
 
 <style scoped>
+section {
+  width: 100%;
+  overflow: hidden;
+  height: 20%;
+}
 #containerFlex {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20%;
   background: #ffe602;
-  width: 100%;
-  overflow: hidden;
   border: 8px solid black;
 }
 
-/*remove p*/
-.cnnContents {
+section .scroll {
   width: 100%;
-  margin: 0 auto;
-  font-size: 30px;
+  display: flex;
+}
+section .scroll div {
+  font-family: "Basement Grotesque";
+  font-size: 80px;
   white-space: nowrap;
+  animation: animate 40s linear infinite;
+  animation-delay: -40s;
 }
-
-.loop1 {
-  font-family: "Basement Grotesque";
-  font-size: 80px;
-  display: inline-block;
-  /* Apply animation to this element */
-  -webkit-animation: scrolling-left1 20s linear infinite;
-  animation: scrolling-left1 20s linear infinite;
+section .scroll div:nth-child(2) {
+  animation: animate2 40s linear infinite;
+  animation-delay: -20s;
 }
-
-.loop2 {
-  font-family: "Basement Grotesque";
-  font-size: 80px;
-  display: inline-block;
-  /* Apply animation to this element */
-  -webkit-animation: scrolling-left2 40s linear infinite;
-  animation: scrolling-left2 40s linear infinite;
-  animation-delay: 0.1s;
-}
-/* scrolling-left is continuous/repeatly text */
-@keyframes scrolling-left1 {
+@keyframes animate {
   0% {
-    transform: translateX(0%);
-    -webkit-transform: translateX(0%);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
   }
 }
-@keyframes scrolling-left2 {
+@keyframes animate2 {
   0% {
     transform: translateX(0);
-    -webkit-transform: translateX(0);
   }
   100% {
     transform: translateX(-200%);
-    -webkit-transform: translateX(-200%);
-  }
-}
-
-@-webkit-keyframes scrolling-left1 {
-  0% {
-    -webkit-transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-  }
-}
-@-webkit-keyframes scrolling-left2 {
-  0% {
-    -webkit-transform: translateX(0%);
-  }
-  100% {
-    -webkit-transform: translateX(-200%);
   }
 }
 </style>
