@@ -72,14 +72,14 @@
           <span style="color: #ffe602">Digital Marketing</span>• Team Player •
           <span style="color: #ffe602">Advertising</span> • Music Lover •
           <span style="color: #ffe602">Project Manager</span> • Climber •
-          <span style="color: #ffe602">UX/UI</span> • sdfg •
+          <span style="color: #ffe602">UX/UI</span> • Globetrotter •
         </div>
         <div>
           <span style="color: #ffe602">Front-End Dev</span> • Craftsman •
           <span style="color: #ffe602">Digital Marketing</span>• Team Player •
           <span style="color: #ffe602">Advertising</span> • Music Lover •
           <span style="color: #ffe602">Project Manager</span> • Climber •
-          <span style="color: #ffe602">UX/UI</span> • sdfg •
+          <span style="color: #ffe602">UX/UI</span> • Globetrotter •
         </div>
       </div>
     </section>
@@ -168,8 +168,8 @@ button {
 
 section {
   padding: 5%;
+  padding-bottom: 15%;
   margin: 0;
-
   background-color: black;
   width: 100%;
   overflow: hidden;
