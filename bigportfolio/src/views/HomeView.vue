@@ -5,6 +5,7 @@
     <TechStack />
     <About />
     <Hobbies />
+    <Contact />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Epic from "@/components/sections/Epic.vue";
 import TechStack from "@/components/sections/TechStack.vue";
 import About from "@/components/sections/About.vue";
 import Hobbies from "@/components/sections/Hobbies.vue";
+import Contact from "../components/sections/Contact.vue";
 
 export default {
   name: "HomeView",
@@ -25,6 +27,7 @@ export default {
     TechStack,
     About,
     Hobbies,
+    Contact,
   },
 };
 </script>

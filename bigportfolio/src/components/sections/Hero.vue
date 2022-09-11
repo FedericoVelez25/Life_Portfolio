@@ -1,7 +1,11 @@
 <template>
   <div class="hero-container">
-    <div class="container-flex">
-      <img src="../../assets/hero/white_arrow.png" alt="down arrow" />
+    <div class="containerFlex">
+      <img
+        id="downArrow"
+        src="../../assets/hero/white_arrow.png"
+        alt="down arrow"
+      />
       <div class="hero-content-text">
         <h2>This is my portfolio</h2>
         <g class="welcome">
@@ -31,17 +35,19 @@ export default {
   flex-direction: column;
   justify-content: flex-end;
   text-align: right;
-  padding: 0px 100px;
   height: 85vh;
   width: auto;
   background-color: black;
 }
+.containerFlex {
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+}
 
-img {
-  margin-left: 50px;
-  margin-bottom: 100px;
-  height: 300px;
-  width: auto;
+#downArrow {
+  z-index: 20;
+  /* display: none; */
 }
 
 .hero-content-text {
@@ -50,7 +56,7 @@ img {
   display: flex;
   flex-direction: column;
   text-align: right;
-  width: 60vw;
+  width: auto;
   height: 80%;
   padding-bottom: 30px;
 }
@@ -77,7 +83,7 @@ g {
   height: 50%;
 }
 
-/* 
+/*
 g p {
   transform: translateY(3px);
 }
