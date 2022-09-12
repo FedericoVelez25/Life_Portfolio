@@ -2,7 +2,10 @@
   <div class="containerFlex">
     <div :class="isEven ? 'blackCard' : 'yellowCard'">
       <div :class="isEven ? 'textSideBlack' : 'textSideYellow'">
-        <h2>{{ title }}</h2>
+        <div class="underlineText">
+          <h2>{{ title }}</h2>
+          <div class="underline"></div>
+        </div>
         <p>
           {{ description }}
         </p>
@@ -102,6 +105,25 @@ h2 {
   font-size: 64px;
   padding-left: 2.5%;
   padding-right: 2.5%;
+  z-index: 20;
+}
+
+.underlineText {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  position: relative;
+  width: 100%;
+}
+
+.underline {
+  width: 70%;
+  height: 40px;
+  background-color: #ffe602;
+  align-self: center;
+  position: absolute;
+  top: 50px;
+  z-index: 2;
 }
 
 p {

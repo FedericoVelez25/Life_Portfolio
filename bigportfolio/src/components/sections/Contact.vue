@@ -1,7 +1,10 @@
 <template>
   <article class="contactSctn">
     <section class="textContainer">
-      <h2>Let's Talk!</h2>
+      <div class="underlineText">
+        <h2>Let's Talk!</h2>
+        <div class="underline"></div>
+      </div>
       <p>federico.velezferro@gmail.com</p>
     </section>
     <form class="contactForm" action="submit">
@@ -43,6 +46,21 @@ export default {
 .textContainer {
   display: flex;
   flex-direction: column;
+}
+.underlineText {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.underline {
+  width: 60%;
+  height: 40px;
+  background-color: #ffe602;
+  align-self: center;
+  position: absolute;
+  top: 120px;
+  z-index: -1;
 }
 h2 {
   font-family: "Bubblegum";
