@@ -9,6 +9,7 @@
       src="@/assets/hero/clouds/cloud_1.png"
       alt="cloud"
     />
+    <img class="falling" src="@/assets/hero/climber_fall.png" alt="fall" />
     <div class="info">
       <p id="intro_text">
         A <span style="color: #ffe602">Front-End developer</span> with a
@@ -129,6 +130,12 @@ export default {
   top: 70px;
   left: 70px;
   z-index: 10;
+}
+
+.falling {
+  position: absolute;
+  top: 10%;
+  left: 18%;
 }
 
 /* INTRO TEXT */

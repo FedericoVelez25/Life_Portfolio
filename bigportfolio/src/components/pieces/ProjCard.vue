@@ -117,7 +117,7 @@ h2 {
 }
 
 .underline {
-  width: 70%;
+  width: 65%;
   height: 40px;
   background-color: #ffe602;
   align-self: center;
