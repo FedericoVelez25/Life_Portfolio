@@ -14,8 +14,9 @@ let transporter = nodemailer.createTransport({
 });
 
 exports.sendEmail = functions.https.onRequest((request, response) => {
-  const emailFrom = "fede1@test.com";
-  const message = "Test message from the app!";
+  const nameFrom = request.query.nameFrom;
+  const emailFrom = request.query.emailFrom;
+  const message = request.query.message;
   const mailOptions = {
     from: "Federico Vélez <federico.velezferro@gmail.com>",
     to: "federico.velezferro@gmail.com",
@@ -26,7 +27,7 @@ exports.sendEmail = functions.https.onRequest((request, response) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(
-        `ERROR: (email) ${emailFrom} --- (message) ${message} --- (error) ${error.toString()}`
+        `ERROR: (name) ${nameFrom} --- (email) ${emailFrom} --- (message) ${message} --- (error) ${error.toString()}`
       );
       response.send(error.toString());
     }
