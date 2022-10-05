@@ -71,6 +71,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 100%;
+  margin-bottom: 15px;
 }
 
 .yellowCard {
@@ -91,12 +92,12 @@ export default {
   text-align: center;
   width: 50%;
   margin: 0;
-  /* padding: auto; */
   padding-left: 0;
   height: auto;
   background-color: #ffffff;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+
   gap: 10%;
 }
 
